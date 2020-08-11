@@ -1,30 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+	<title>RockPaperScissors</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
 <body>
-  <div id="newGame_layer" class="new-game-layer-style">
-    <h3>Podaj imię gracza:</h3>
-    <input type="text" name="player_name" placeholder="Wpisz swoje imię">
-    <button>Submit</button>
-  </div>
-  <div id="game" style="display: none;">
-    <div class="buttons-container">
-      <div class="button-container">
-        <button id="new-game" style="display: none;">Nowa gra</button>
-      </div>
-    </div>
-    <div class="buttons-container dismiss">
-      <div class="button-container">
-        <button id="papier">Papier</button>
-      </div>
-      <div class="button-container">
-        <button id="kamien">Kamień</button>
-      </div>
-      <div class="button-container">
-        <button id="nozyce">Nożyce</button>
-      </div>
-    </div>
-    <div id="output"></div>
-    <div id="result">
-      <div id="playerResultContainer"></div>
-      <div id="pcResultContainer"></div>
-    </div>
-  </div>
+	<section class="intro">
+		<div class="introduction">
+			<h1 class="game-title">Rock, Paper, Scissors</h1>
+			<h2>Try your <span>luck</span> playing against the computer</h2>
+		</div>
+		<a href="#game">
+			<i class="fas fa-play-circle"></i>
+		</a>
+	</section>
+	<section class="game" id="game">
+		<h1>Choose the button</h1>
+		<div class="buttons" id="buttons">
+			<i class="fas fa-hand-rock" id="button-rock"></i>
+			<i class="fas fa-hand-paper" id="button-paper"></i>
+			<i class="fas fa-hand-scissors" id="button-scissors"></i>
+		</div>
+		
+		<div class="message" id="messages"></div>
+		<div class="counter" id="result"></div>
+		<div>
+			<div class="rules rules-left">
+				<i class="fas fa-exclamation"></i>
+			</div>
+			<ul>
+				<li>Rock <span>crushes</span> Scissors</li>
+				<li>Paper <span>covers</span> Rock</li>
+				<li>Scissors <span>cuts</span> Paper</li>
+			</ul>
+		</div>
+		<div>
+			<div class="rules rules-right">
+				<i class="fas fa-question"></i>
+			</div>
+			<span class="faq">Each player choose one<br> of three shapes. These<br> shapes are "rock", "paper" <br> and "scissors".</span>
+		</div>
+		
+	</section>
+	<script src="js/functions.js"></script>
+	<script src="js/script.js"></script>
 </body>
+</html>
